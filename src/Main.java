@@ -6,5 +6,6 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.print("Teste");
         System.out.println("Teste 2");
+        System.out.println("Teste 3");
     }
 }
