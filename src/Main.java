@@ -8,7 +8,7 @@ public class Main {
         boolean jogofinalizado = false;
         int pontos = 0;
         int cartas = 0;
-        int totalcartas = 7;
+        int totalcartas = 5;
         int tentativas = 7;
 
         while (true) {
