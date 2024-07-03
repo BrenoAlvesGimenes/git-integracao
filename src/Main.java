@@ -8,7 +8,7 @@ public class Main {
         boolean jogofinalizado = false;
         int pontos = 0;
         int cartas = 0;
-        int totalcartas = 5;
+        int totalcartas = 6;
         int tentativas = 7;
 
         while (true) {
@@ -22,7 +22,7 @@ public class Main {
             while (tentativas > -1) {
                 if (escolhaJogo == 1) {  // jogo número aleatório
                     int jogo = (int) (Math.random() * 100);
-                    System.out.print("Chute um número entre 0 a 100: ");
+                    System.out.print("Digite um número entre 0 a 100: ");
                     int pergunta = scan.nextInt();
 
                     if (pergunta == jogo) {
@@ -55,12 +55,12 @@ public class Main {
                 } // pontos
 
                 if (escolhaJogo == 3) { // 21
-                    if (jogofinalizado == false) {
+                    if (!jogofinalizado) {
                         System.out.print("Começar o jogo? (Sim) (Não): ");
                         String pergunta = scan.nextLine();
 
                         if (pergunta.equalsIgnoreCase("sim")) {
-                            while (totalcartas > 0 && jogofinalizado == false) {
+                            while (totalcartas > 0 && !jogofinalizado) {
                                 int jogo = (int) (Math.random() * 10);
                                 System.out.println("Total de cartas: " + totalcartas + " (se chegar a 0 o jogo acaba)");
                                 System.out.print("Receber carta? : ");
@@ -99,7 +99,7 @@ public class Main {
                             jogofinalizado = true;
                             pontos++;
                             break;
-                        } if (jogofinalizado == true && cartas == 0) {
+                        } if (jogofinalizado && cartas == 0) {
                             System.out.println("Você não pegou nenhuma carta, você se acha o esperto é?");
                         }
                     }
