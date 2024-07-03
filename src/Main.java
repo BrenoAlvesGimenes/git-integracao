@@ -22,7 +22,7 @@ public class Main {
             while (tentativas > -1) {
                 if (escolhaJogo == 1) {  // jogo número aleatório
                     int jogo = (int) (Math.random() * 100);
-                    System.out.print("Chute um número entre 0 a 100: ");
+                    System.out.print("Digite um número entre 0 a 100: ");
                     int pergunta = scan.nextInt();
 
                     if (pergunta == jogo) {
